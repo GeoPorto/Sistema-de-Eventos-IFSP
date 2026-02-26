@@ -1,63 +1,24 @@
-#Sistema de Eventos – Projeto Python + MySQL
+# Sistema de Eventos – Projeto Python + MySQL
 
-Sistema desenvolvido em Python utilizando arquitetura com DAO e banco de dados MySQL.
+Sistema desenvolvido em Python utilizando arquitetura com o padrão DAO (Data Access Object) e banco de dados MySQL.
 
-##Pré-requisitos
+## 📌 Pré-requisitos
 
-Antes de rodar o projeto, você precisa ter instalado:
+Antes de rodar o projeto, certifique-se de ter instalado em sua máquina:
 
-✅ Python 3.10+
+* ✅ **Python 3.10+**
+* ✅ **MySQL Server**
+* ✅ **MySQL Workbench** (opcional, mas recomendado para gerenciamento visual)
+* ✅ **Git**
 
-✅ MySQL Server
+---
 
-✅ MySQL Workbench (opcional, mas recomendado)
+## 🚀 Instalação e Configuração
 
-✅ Git
+### 1. Clonar o Projeto
 
-##Clonar o Projeto
+Abra o seu terminal e execute os comandos abaixo para clonar o repositório e entrar na pasta do projeto:
 
-git clone https://github.com/GeoPorto/Sistema-de-Eventos-IFSP
+```bash
+git clone [https://github.com/GeoPorto/Sistema-de-Eventos-IFSP](https://github.com/GeoPorto/Sistema-de-Eventos-IFSP)
 cd Sistema-de-Eventos-IFSP
-
-##Criar e Ativar Ambiente Virtual (Recomendado)
-
-#Windows
-python -m venv venv
-venv\Scripts\activate
-
-#Linux / Mac
-python3 -m venv venv
-source venv/bin/activate
-
-##Instalar Dependências
-
-A partir do arquivo requirements.txt:
-
-pip install -r requirements.txt
-
-##Configurar Banco de Dados
-
-#Criar Banco
-
-Abra o MySQL Workbench ou terminal MySQL e execute o script presente em *sql - tabelas/script*
-
-##Alterar arquivo .env
-
-Na raiz do projeto, crie um arquivo chamado:
-
-.env
-
-E adicione:
-
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=sua_senha
-DB_NAME=db_eventos
-
-Altere sua_senha por sua senha real do MySQL.
-
-##Rodar o Projeto
-
-Na raiz do Projeto, rode:
-
-python menu.py

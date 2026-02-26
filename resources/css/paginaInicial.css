@@ -1,0 +1,65 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #edf2f6;
+}
+
+.container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.container-cadastro {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.login-form {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.cadastro-form {
+    width: 55%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.btn-black {
+    background-color: #000 !important;
+    color: #fff;
+}
+
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+}

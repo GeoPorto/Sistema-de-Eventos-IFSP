@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/paginaInicial.css') }}">
+    <title>Cadastrar Evento</title>
+
+</head>
+
+<body>
+    {% extends 'menuAdm.html' %}
+
+    {% block content %}
+
+
+    <div class="container-cadastro">
+
+        <div class="cadastro-form">
+            <h5>Cadastrar Evento</h5>
+            <hr>
+            <form action="{{ url_for('cadastrarevento') }}" method="post">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" name="nome" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label>Quantidade de Vagas:</label>
+                    <input type="number" name="qtdvagas" class="form-control w-25" min="1" required />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Quantidade de Chamadas:</label>
+                    <input type="number" name="qtdchamadas" class="form-control w-25" min="1" required />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Carga Horária:</label>
+                    <input type="number" name="ch" class="form-control w-25" min="1" required />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Semana:</label>
+                    <select class="form-select w-25" name="semana" required>
+
+                        {% for semana in listaSemanas %}
+                        <option value="{{ semana.getIdSemana() }}">{{ semana.getSigla() }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Palestrante:</label>
+                    <select class="form-select w-25" name="palestrante" required>
+
+                        {% for palestrante in listaPalestrantes %}
+                        <option value="{{ palestrante.getIdPalestrante() }}">{{ palestrante.getNome() }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-black">Salvar</button>
+                <button type="button" class="btn btn-secondary"
+                    onclick="window.location.href='{{ url_for('eventosAdm') }}'">Voltar</button>
+            </form>
+        </div>
+
+    </div>
+
+    {% endblock %}
+</body>
+
+
+</html>

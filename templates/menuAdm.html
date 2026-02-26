@@ -1,0 +1,52 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100%; float:left">
+
+  <img src="../resources/imagens/Marca_IFSP_2015-11_branco.png" height="80" width="230" />
+
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a href="{{ url_for('paginaInicialAdm') }}"
+        class="nav-link {% if current_page == 'adm/paginaInicial' %}active bg-primary{% else %}text-white{% endif %}">
+        Início
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('semanasAdm') }}"
+        class="nav-link {% if current_page == 'adm/semanas' %}active bg-primary{% else %}text-white{% endif %}">
+        Semanas
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('eventosAdm') }}"
+        class="nav-link {% if current_page == 'adm/eventos' %}active bg-primary{% else %}text-white{% endif %}">
+        Eventos
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('palestrantesAdm') }}"
+        class="nav-link {% if current_page == 'adm/palestrantes' %}active bg-primary{% else %}text-white{% endif %}">
+        Palestrantes
+      </a>
+    </li>
+    <li>
+    <li>
+      <a href="{{ url_for('participantesAdm') }}"
+        class="nav-link {% if current_page == 'adm/participantes' %}active bg-primary{% else %}text-white{% endif %}">
+        Participantes
+      </a>
+    </li>
+    <li>
+  </ul>
+  <hr>
+  <div>
+    <a href="{{ url_for('sair') }}" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1"
+      aria-expanded="false">
+      <strong>Sair</strong>
+    </a>
+  </div>
+</div>
+
+<div class="content" style=" width: 75%; height: 100%; float:left; margin-left: 50px;">
+  {% block content %}
+  {% endblock %}
+</div>

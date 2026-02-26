@@ -1,0 +1,72 @@
+
+CREATE SCHEMA IF NOT EXISTS db_eventos;
+USE db_eventos ;
+
+
+CREATE TABLE administrador (
+  idAdministrador INT NOT NULL AUTO_INCREMENT,
+  login VARCHAR(15),
+  senha VARCHAR(15),
+  PRIMARY KEY (idAdministrador));
+
+CREATE TABLE participante (
+  idParticipante INT NOT NULL AUTO_INCREMENT,
+  cpf VARCHAR(14),
+  curso VARCHAR(50),
+  email VARCHAR(60),
+  login VARCHAR(15),
+  nome VARCHAR(60),
+  senha VARCHAR(15),
+  PRIMARY KEY (idParticipante))
+;
+
+CREATE TABLE palestrante (
+  idPalestrante INT NOT NULL AUTO_INCREMENT,
+  cargo VARCHAR(100),
+  cpf VARCHAR(14),
+  email VARCHAR(60),
+  nome VARCHAR(60),
+  PRIMARY KEY (idPalestrante));
+
+CREATE TABLE semana (
+  idSemana INT NOT NULL AUTO_INCREMENT,
+  finalizado VARCHAR(1),
+  inicio DATE,
+  nome VARCHAR(100),
+  sigla VARCHAR(10),
+  termino DATE,
+  PRIMARY KEY (idSemana));
+
+CREATE TABLE evento (
+  idEvento INT NOT NULL AUTO_INCREMENT,
+  ch INT,
+  nome VARCHAR(100),
+  qtdematriculados INT,
+  qtdevagas INT,
+  idSemana INT,
+  qtdChamadas INT,
+  idPalestrante INT,
+  PRIMARY KEY (idEvento),
+    FOREIGN KEY (idPalestrante)
+    REFERENCES palestrante (idPalestrante),
+    FOREIGN KEY (idSemana)
+    REFERENCES semana (idSemana));
+
+CREATE TABLE matricula (
+  idMatricula INT NOT NULL AUTO_INCREMENT,
+  idParticipante INT,
+  idEvento INT,
+  PRIMARY KEY (idMatricula),
+    FOREIGN KEY (idParticipante)
+    REFERENCES participante (idParticipante),
+    FOREIGN KEY (idEvento)
+    REFERENCES db_eventos.evento (idEvento));
+
+CREATE TABLE presenca (
+idPresenca INT NOT NULL AUTO_INCREMENT,
+idMatricula INT,
+presente VARCHAR(1),
+PRIMARY KEY (idPresenca),
+    FOREIGN KEY (idMatricula)
+    REFERENCES matricula (idMatricula)
+);

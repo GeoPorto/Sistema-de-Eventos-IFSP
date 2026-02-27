@@ -70,3 +70,6 @@ PRIMARY KEY (idPresenca),
     FOREIGN KEY (idMatricula)
     REFERENCES matricula (idMatricula)
 );
+
+INSERT INTO administrador (login, senha)
+VALUES ('adm', 'adm');

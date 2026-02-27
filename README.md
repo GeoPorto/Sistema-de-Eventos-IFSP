@@ -26,7 +26,7 @@ cd Sistema-de-Eventos-IFSP
 
 ```
 
-### 2. Criar e Ativar o Ambiente Virtual (Recomendado)
+### Criar e Ativar o Ambiente Virtual (Recomendado)
 
 Use o comando correspondente ao seu sistema operacional:
 

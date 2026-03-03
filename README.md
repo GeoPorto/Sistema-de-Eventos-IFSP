@@ -79,6 +79,17 @@ DB_NAME=db_eventos
 
 ---
 
+## Popular o Banco com dados iniciais (opicional)
+
+Para popular o banco com alguns dados iniciais, rode o arquivo inserirDadosIniciais.py na raiz do projeto:
+
+```bash
+python inserirDadosIniciais.py
+
+```
+
+---
+
 ## Executar o Projeto
 
 Após configurar o ambiente e o banco de dados, rode o arquivo principal na raiz do projeto:

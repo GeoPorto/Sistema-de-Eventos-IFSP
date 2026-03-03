@@ -21,7 +21,7 @@ Antes de rodar o projeto, certifique-se de ter instalado em sua máquina:
 Abra o seu terminal e execute os comandos abaixo para clonar o repositório e entrar na pasta do projeto:
 
 ```bash
-git clone [https://github.com/GeoPorto/Sistema-de-Eventos-IFSP](https://github.com/GeoPorto/Sistema-de-Eventos-IFSP)
+git clone https://github.com/GeoPorto/Sistema-de-Eventos-IFSP
 cd Sistema-de-Eventos-IFSP
 
 ```

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 venv
 venv/
 __pycache__
 __pycache__/
 .idea
-=======
 venv/
 __pycache__/
 .idea/
->>>>>>> c584eb6 (editar gitignore)
 .env
